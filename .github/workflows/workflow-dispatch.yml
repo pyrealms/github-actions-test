@@ -25,6 +25,7 @@ jobs:
 
       - name: greet
         run: | 
+          echo "ref is ${{ github.ref }}
           echo "environment is ${{ github.event.inputs.environment }} / ${{ inputs.environment }}"
           echo "boolean is ${{ github.event.inputs.boolean }}" / ${{ inputs.boolean }} 
           echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
