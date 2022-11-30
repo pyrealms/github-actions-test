@@ -34,7 +34,7 @@ jobs:
 
       - name: Get Branches
         run: |
-          branches=`git branch -r | awk -F\/ '{print $2}'`
+          branches=`it branch -r | awk -F\/ '{print "- "$2}'`
           echo $branches
 
       - name: greet
