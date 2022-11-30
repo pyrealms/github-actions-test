@@ -26,9 +26,9 @@ jobs:
 
       - name: Get Branches
         run: |
-          branches = `git branch -r` | `awk -F\/ '{print $2}'`
+          branches=git branch -r | awk -F\/ '{print $2}'
           echo $branches
-          
+
       - name: greet
         run: | 
           echo "ref is ${{ github.ref }}"
