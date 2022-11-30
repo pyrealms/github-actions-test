@@ -34,8 +34,9 @@ jobs:
 
       - name: Get Branches
         run: |
-          branches=`git branch -r | awk -F\/ '{print "- "$2}'`
-          echo $branches
+          git branch -r | awk -F\/ '{print "- "$2"\n"}' branches.yml
+          ls -la
+          cat branches.yml
 
       - name: greet
         run: | 
