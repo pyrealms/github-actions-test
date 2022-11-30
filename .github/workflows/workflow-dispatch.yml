@@ -21,8 +21,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
+      - name: Get Branches
+        run: |
+          branches = `git branch -r` | `awk -F\/ '{print $2}'`
+          echo $branches
+          
       - name: greet
         run: | 
           echo "ref is ${{ github.ref }}"
